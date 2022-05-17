@@ -1,0 +1,22 @@
+@import "./partials/mixins";
+
+a {
+  @include transition(0.3s ease-in-out all);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 6px;
+  font-size: 1.6rem;
+  transition: 0.3s ease-in-out all;
+  text-decoration: none;
+  &.btn-primary {
+    background: #ef9273;
+    color: #fff;
+    border: 1px solid #ef9273;
+    &:hover {
+      opacity: 0.8; 
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.sidebar {
+  width: 300px;
+  position: fixed;
+  height: 100vh;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #fefbe9;
+
+  .headshot {
+    border-radius: 50%;
+    margin-bottom: 40px;
+  }
+
+  .custom-logo-link {
+    font-weight: 600;
+    font-size: 2.4rem;
+    line-height: 1;
+    text-decoration: none;
+    margin-bottom: 20px;
+    .fullstop {
+      color: #ef9273;
+    }
+  }
+
+  .subheading {
+    font-size: 14px;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  .navigation {
+    ul {
+      text-align: center;
+    }
+  }
+}

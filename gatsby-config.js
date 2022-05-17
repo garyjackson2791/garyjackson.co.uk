@@ -1,17 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Gary Jackson | Web Development Liverpool`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Gary Jackson`,
+      summary: `Highly experienced in building bespoke custom websites using WordPress.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Highly experienced in building bespoke custom websites using WordPress.`,
+    siteUrl: `https://garyjackson.co.uk/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `garyjackson91`,
     },
   },
   plugins: [
+    'gatsby-plugin-postcss',
+    `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -124,7 +126,10 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    'gatsby-plugin-sass',
     `gatsby-plugin-react-helmet`,
+    `gatsby-background-image`,
+    `gatsby-plugin-styled-components`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
