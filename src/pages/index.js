@@ -25,16 +25,18 @@ const Home = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo title="Home" />
       <section className={homepage.masthead} id="masthead">
-        <div className={["wrap flex mx-auto", homepage.wrap].join(" ")}>
-          <div className="flex items-center md:w-1/2 px-3">
+        <div className={["md:grid-cols-2 mx-auto", homepage.wrap].join(" ")}>
+          <div className="px-3">
             <div className={homepage.content}>
               <h1 className={homepage.pageTitle} data-sal="fade" data-sal-duration="600" data-sal-delay="300" data-sal-easing="ease">Web Developer based in Liverpool</h1>
               <p class={homepage.mastheadSummary} data-sal="fade" data-sal-duration="600" data-sal-delay="600" data-sal-easing="ease">Highly experienced in building bespoke custom websites using WordPress.</p>
               <a href="#work" className={[global.btn, global.btnPrimary].join(" ")} data-sal="fade" data-sal-duration="600" data-sal-delay="900" data-sal-easing="ease">See some of my work</a>
             </div>
           </div>
-          <div className="flex items-center justify-center md:w-1/2 px-3" data-sal="slide-right" data-sal-duration="600" data-sal-delay="1200" data-sal-easing="ease">
-            <Lottie animationData={contactAnimation} style={{ width: "300px" }} />
+          <div className="px-3">
+            <div className="flex items-center justify-center px-3" data-sal="slide-right" data-sal-duration="600" data-sal-delay="1200" data-sal-easing="ease">
+              <Lottie animationData={contactAnimation} style={{ width: "300px" }} />
+            </div>
           </div>
         </div>
       </section>
@@ -365,40 +367,44 @@ const Home = ({ data, location }) => {
         <div className={homepage.wrap}>
           <span className={homepage.headingMeta} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">Contact</span>
           <h2 className={homepage.heading} data-sal="slide-down" data-sal-duration="600" data-sal-delay="500" data-sal-easing="ease">Get in touch</h2>
-          <div className={["wrap flex items-start mx-auto", homepage.wrap].join(" ")}>
-            <div className="flex items-center md:w-1/2 px-3">
-              <div className={homepage.contactIcon} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">
-                <StaticImage
-                  className="email"
-                  layout="fixed"
-                  formats={["auto", "webp", "avif"]}
-                  src="../images/email.svg"
-                  width={30}
-                  height={30}
-                  quality={95}
-                  alt="email"
-                />
+          <div className={["grid md:grid-cols-2", homepage.wrap].join(" ")}>
+            <div className={["md:mb-0 mb-24", homepage.wrap].join(" ")}>
+              <div className="flex items-center md:w-1/2 px-3">
+                <div className={homepage.contactIcon} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">
+                  <StaticImage
+                    className="email"
+                    layout="fixed"
+                    formats={["auto", "webp", "avif"]}
+                    src="../images/email.svg"
+                    width={30}
+                    height={30}
+                    quality={95}
+                    alt="email"
+                  />
+                </div>
+                <a href="mailto:hello@garyjackson.co.uk" className={homepage.emailLink} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">hello@garyjackson.co.uk</a>
               </div>
-              <a href="mailto:hello@garyjackson.co.uk" className={homepage.emailLink} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">hello@garyjackson.co.uk</a>
             </div>
-            <div className="flex items-center md:w-1/2 px-3">
-              <form method="post" action="https://getform.io/f/406fecd9-20fa-4d29-876a-5185d2bc1f48">
-                <div className={homepage.formGroup} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">
-                  <input type="text" name="name" id="name" placeholder="Name" required/>
-                </div>
+            <div>
+              <div className="flex items-center md:w-1/2 px-3">
+                <form method="post" action="https://getform.io/f/406fecd9-20fa-4d29-876a-5185d2bc1f48">
+                  <div className={homepage.formGroup} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">
+                    <input type="text" name="name" id="name" placeholder="Name" required/>
+                  </div>
 
-                <div className={homepage.formGroup} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">
-                  <input type="email" name="email" id="email" placeholder="Email" required/>
-                </div>
+                  <div className={homepage.formGroup} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">
+                    <input type="email" name="email" id="email" placeholder="Email" required/>
+                  </div>
 
-                <div className={homepage.formGroup} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">
-                  <textarea name="message" id="message" rows="5" placeholder="Message" required/>
-                </div>        
+                  <div className={homepage.formGroup} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">
+                    <textarea name="message" id="message" rows="5" placeholder="Message" required/>
+                  </div>        
 
-                <div className={homepage.formGroup} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">
-                  <button type="submit" className={[global.btn, global.btnPrimary].join(" ")}>Send</button>
-                </div>
-              </form>
+                  <div className={homepage.formGroup} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">
+                    <button type="submit" className={[global.btn, global.btnPrimary].join(" ")}>Send</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>

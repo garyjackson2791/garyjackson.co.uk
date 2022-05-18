@@ -13,6 +13,17 @@ const Sidebar = () => {
   return (
 
     <div className={[sidebar.sidebar, "text-center"].join(" ")}>
+      <div class="menu-toggle">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="cross">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
       <StaticImage
         layout="fixed"
         formats={["auto", "webp", "avif"]}
@@ -50,7 +61,7 @@ const Sidebar = () => {
             <a href="#contact">Contact</a>
           </li>
         </ul>
-      </nav>          
+      </nav>       
     </div>
 
 
