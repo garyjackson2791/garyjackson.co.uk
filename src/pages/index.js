@@ -11,12 +11,15 @@ import BackgroundImage from 'gatsby-background-image'
 import Lottie from "lottie-react"
 
 import lottieImage from "../animations/91382-web-development.json"
+import lottieImageComingSoon from "../animations/104195-coming-soon-dark-background.json"
+
 
 import * as global from '../styles/global.module.scss'
 import * as homepage from '../styles/homepage.module.scss'
 
 const Home = ({ data, location }) => {
   const contactAnimation = JSON.parse(JSON.stringify(lottieImage))
+  const comingSoonAnimation = JSON.parse(JSON.stringify(lottieImageComingSoon))
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
@@ -356,7 +359,9 @@ const Home = ({ data, location }) => {
           <span className={homepage.headingMeta} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">Read</span>
           <h2 className={homepage.heading} data-sal="slide-left" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">Recent Blog</h2>
 
-          <div>coming soon</div>
+          <div>
+            <Lottie animationData={comingSoonAnimation} style={{ width: "200px" }} />
+          </div>
         </div>
       </section>
 
