@@ -367,8 +367,8 @@ const Home = ({ data, location }) => {
         <div className={homepage.wrap}>
           <span className={homepage.headingMeta} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">Contact</span>
           <h2 className={homepage.heading} data-sal="slide-down" data-sal-duration="600" data-sal-delay="500" data-sal-easing="ease">Get in touch</h2>
-          <div className={["grid md:grid-cols-2", homepage.wrap].join(" ")}>
-            <div className={["md:mb-0 mb-24", homepage.wrap].join(" ")}>
+          <div className={["grid md:grid-cols-2"].join(" ")}>
+            <div className={["md:mb-0 mb-24"].join(" ")}>
               <div className="flex items-center md:w-1/2 px-3">
                 <div className={homepage.contactIcon} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">
                   <StaticImage
@@ -386,7 +386,7 @@ const Home = ({ data, location }) => {
               </div>
             </div>
             <div>
-              <div className="flex items-center md:w-1/2 px-3">
+              <div className="flex items-center px-3">
                 <form method="post" action="https://getform.io/f/406fecd9-20fa-4d29-876a-5185d2bc1f48">
                   <div className={homepage.formGroup} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">
                     <input type="text" name="name" id="name" placeholder="Name" required/>
