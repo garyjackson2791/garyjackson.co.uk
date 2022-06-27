@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import * as ReactDOM from 'react-dom';
+import * as ReactDOM from 'react-dom'
 
 import "react-recaptcha"
 
@@ -28,12 +28,15 @@ const Home = ({ data, location }) => {
 
   var Recaptcha = require('react-recaptcha');
  
-ReactDOM.render(
-  <Recaptcha
-    sitekey="6LccLKQgAAAAAL4bVQsBftxFPO2Hg2XLzmR4KNNe"
-  />,
-  document.getElementById('recaptcha')
-);
+  if(window !== "undefined"){
+    ReactDOM.render(
+      <Recaptcha
+        sitekey="6LccLKQgAAAAAL4bVQsBftxFPO2Hg2XLzmR4KNNe"
+      />,
+      document.getElementById('recaptcha')
+    );
+  }
+
 
   
   return (
