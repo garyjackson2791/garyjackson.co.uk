@@ -15,6 +15,7 @@ module.exports = {
     'gatsby-plugin-postcss',
     `gatsby-plugin-scroll-reveal`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-recaptcha`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

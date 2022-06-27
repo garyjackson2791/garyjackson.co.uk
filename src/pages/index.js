@@ -1,5 +1,8 @@
 import * as React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import * as ReactDOM from 'react-dom';
+
+import "react-recaptcha"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -22,6 +25,15 @@ const Home = ({ data, location }) => {
   const comingSoonAnimation = JSON.parse(JSON.stringify(lottieImageComingSoon))
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
+
+  var Recaptcha = require('react-recaptcha');
+ 
+ReactDOM.render(
+  <Recaptcha
+    sitekey="6LccLKQgAAAAAL4bVQsBftxFPO2Hg2XLzmR4KNNe"
+  />,
+  document.getElementById('recaptcha')
+);
 
   
   return (
@@ -403,7 +415,11 @@ const Home = ({ data, location }) => {
 
                   <div className={homepage.formGroup} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">
                     <textarea name="message" id="message" rows="5" placeholder="Message" required/>
-                  </div>        
+                  </div>
+
+                  <div>
+                    <input type="hidden" id="captchaResponse" name="g-recaptcha-response" />   
+                  </div>
 
                   <div className={homepage.formGroup} data-sal="slide-right" data-sal-duration="600" data-sal-delay="400" data-sal-easing="ease">
                     <button type="submit" className={[global.btn, global.btnPrimary].join(" ")}>Send</button>
