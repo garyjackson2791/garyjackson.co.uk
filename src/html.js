@@ -12,8 +12,6 @@ export default function HTML(props) {
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         {props.headComponents}
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
-
 
       </head>
       <body {...props.bodyAttributes}>
@@ -24,7 +22,6 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
-        <div id="recaptcha"></div>
       </body>
     </html>
   )
